@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package example.complex;
+
+option go_package = "github.com/hadi/myapp/proto";
+
+message Person {
+  int32 id = 1;
+  string name = 2;
+}
+
+message Class {
+  Person teacher = 1;
+  repeated Person students = 2;
+}
